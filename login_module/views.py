@@ -13,3 +13,12 @@ def login_view(request):
             return JsonResponse({'message': 'Invalid username or password'}, status=401)
     else:
         return JsonResponse({'message': 'Invalid request method'}, status=400)
+
+def register_view(request):
+    if request.method == 'POST':
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+
+        return JsonResponse({'message': 'Registration successful'})
+    else:
+        return JsonResponse({'message': 'Invalid request method'}, status=400)
