@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
     'user_management',
+    'login_module',
 ]
 
 MIDDLEWARE = [
@@ -79,8 +80,14 @@ WSGI_APPLICATION = 'projectapi.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        #'ENGINE': 'django.db.backends.sqlite3',
+        #'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'project_DB',
+        'HOST': 'localhost',
+        'USER':'root',
+        'PASSWORD': 'e1d3R%%1iNg#',
+        'PORT':'3306'
     }
 }
 
