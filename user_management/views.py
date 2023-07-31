@@ -15,7 +15,7 @@ states = [
 ]
 
 class UserProfileCreate(generics.CreateAPIView):
-    # API endpoint that allows creation of a new customer
+    # API endpoint that allows creation of a new client profile
 
     queryset = UserInfo.objects.all(),
     serializer_class = UserSerializer
@@ -70,6 +70,10 @@ class GetFuelQuote(APIView):
             total = gallonsrequested * suggestedprice
 
         return Response({
+
+            "suggested": suggestedprice,
+=======
+
            "total": total
        },status = status.HTTP_200_OK
        ) 
