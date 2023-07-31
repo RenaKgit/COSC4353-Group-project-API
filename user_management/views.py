@@ -70,7 +70,10 @@ class GetFuelQuote(APIView):
             total = gallonsrequested * suggestedprice
 
         return Response({
+
             "suggested": suggestedprice,
+=======
+
            "total": total
        },status = status.HTTP_200_OK
        ) 
